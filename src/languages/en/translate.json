@@ -1,0 +1,114 @@
+{
+    "nav": ["About Us", "Culture", "Capabilities", "Contact Us"],
+    "home": {
+        "sec1": {
+            "title": "Then and now... I am commited to serve",
+            "toLight": ["now", "serve"],
+            "text": "At our organization, dedication to service is paramount. As a diverse and purpose-driven team, we are deeply committed to engaging with the communities we serve. Our collective efforts are guided by a steadfast mission to meet the needs of our clients and uphold principles of integrity in all that we do.",
+            "buttonText": "Click me"
+        },
+        "sec2": [
+            {
+                "title": "Commitment tO quality",
+                "description": "We are committed to delivering exceptional services that exceed our customers' expectations in terms of quality and efficiency."
+            },
+            {
+                "title": "Technology",
+                "description": "We continuously seek to improve our processes through the implementation of innovative technology and cutting-edge practices to ensure optimal results."
+            },
+            {
+                "title": "Transparency and trust",
+                "description": "We adhere to the highest standards of transparency and ethics in all our interactions, building lasting trust-based relationships with our customers."
+            }
+        ]
+    },
+    "OurServices": {
+        "title": "Capabilities",
+        "sec2": {
+            "description": "We offer flexible building solutions and cleaning services for both commercial and residential clients, available on a routine maintenance schedule or as a one-time service upon request." 
+        },
+        "sec3": [
+            {
+                "title": "Reliable & Cost Efective",
+                "description": "Streamline operations, boost efficiency, and reduce expenses with our expert solutions",
+                "more": "Show more...",
+                "less": "Show less..."               
+            },
+            {
+                "title": "General Contractors and Building Solutions",
+                "description": "Comprehensive services for construction and building projects. From concept to completion, we deliver excellence in every phase.",
+                "more": "Show more...",
+                "less": "Show less..."              
+            },
+            {
+                "title": "Professional Cleaning Services",
+                "description": "Impeccable cleaning for commercial and residential spaces. Trust our reliable services for a spotless environment.",
+                "moreText":" ",
+                "more": "Show more...",
+                "less": "Show less...",
+                "list": [
+                    "Sanitization disinfection.",
+                    "Sterilization and janitorial services.",
+                    "Steam carpet cleaning.",
+                    "Tile & Grout maintenance.",
+                    "Event cleaning.",
+                    "Other Building Services."
+                ]
+            }
+        ]
+    },
+    "MyStory": {
+        "title": "Culture",
+        "then": {
+            "title":"Then (2013-2021)<br>US NAVY VETERAN",
+            "subtitle": "As a United States Navy Veteran from 2013 to 2021, I have prioritized community service, demonstrating ongoing commitment to supporting our entire community.",
+            "features":[
+                "Demonstrated leadership and dedication to ensuring a reliable force.",
+                "Engaged in field exercises and the strengthening of capabilities.",
+                "Proactively served our nation with honor."
+            ]
+        },
+        "now":{
+            "title":"Now (2023 until today)",
+            "subtitle": "Committed to building stronger communities. We engage actively in partnership with nonprofit organizations to fulfil our purpose and desire which is to help empower local communities.",
+            "features":[
+                "Purposeful work is essential to our job and client satisfaction, engagement and loyalty.",
+                "Conditioning of the workplace with a healthy and clean environment."
+            ]
+        }
+    },
+    "ContactUs":{
+        "title":"Contact Us",
+        "form":[
+            {
+                "title":"Name:",
+                "placeholder": "Write a name"
+            },
+            {
+                "title":"Email:",
+                "placeholder": "example@hotmail.com",
+                "errorMsg":"Invalid email"
+            },
+            {
+                "title":"Phone:",
+                "placeholder": "(123) 123-1234",
+                "errorMsg":"Invalid phone"
+            },
+            {
+                "title":"How can we help you?:",
+                "placeholder": "Write something..."
+            }
+        ],
+        "buttonText": "Send",
+        "not_empty_error": "Not empty allowed.",
+        "ok_send": "Valid fields, but you need to use emailjs to send messages to the company's email."
+    },
+    "Footer":{
+        "businessDecrption": "Our organization, owned by women and veterans, is committed to addressing diverse consumer needs through a range of services.",
+        "contactInfo":{
+            "title": "Contact",
+            "schedule":"Monday to Friday"
+        },
+        "location":"Location"
+    }
+}

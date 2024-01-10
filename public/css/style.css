@@ -1,0 +1,147 @@
+:root {
+  --color-primary: black; /* blue */
+  --color-secondary: #D3AC07; /* golden */
+  --footer-color: #F2F2F2;
+  --header-size: 7em;
+  --navbar-width: 70em;
+  --fontsize-header: 1rem;
+  --gap-p1-secction: 5rem;
+  --padding-left-decorator: 10rem;
+}
+
+
+.background-white{
+  background-color: white;
+}
+
+.background-color-secondary{
+  background-color: var(--color-secondary);
+}
+
+.background-color-primary{
+  background-color: var(--color-primary);
+}
+
+.border-color-red{
+  border-color: red;
+}
+
+.border-color-primary{
+  border-color: var(--color-primary);
+}
+
+.color-primary{
+  color:var(--color-primary);
+}
+
+.color-white{
+  color: white;
+}
+
+.color-secondary{
+  color:var(--color-secondary);
+}
+
+.color-red{
+  color: red;
+}
+
+.flex-1{
+  flex: 1;
+}
+
+.flex-column{
+  flex-direction: column;
+}
+
+.flex-column-reverse{
+  flex-direction: column-reverse;
+}
+
+.flex-row{
+  flex-direction: row;
+}
+
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: fadeIn 3s;
+}
+
+.grid{
+  display: grid;
+}
+
+.gap-3rem{
+  gap: 3rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.content {
+  
+  width: 80%;
+  max-width: 1300px;
+  
+}
+
+.margin-bottom{
+  margin-bottom: 5rem;
+}
+
+.width-100{
+  width: 100%;
+}
+
+.position-relative{
+  position: relative;
+}
+
+.justify-text{
+  text-align: justify;
+}
+
+/* Media query para tablets */
+@media  only screen and (width< 1250px) {
+  /* Estilos específicos para tablets */
+
+  :root {
+    --navbar-width: 95%;
+    --fontsize-header: 1.2rem;
+    
+  }
+  .content{
+    width: 85vw;
+    max-width: 1100px;
+   }
+
+}
+
+
+@media only screen and (width< 1120px) {
+ .content{
+  width: 100vw;
+  padding: 0px 3rem;
+  box-sizing: border-box;
+ }
+
+
+.background-image {
+  background-position: 65% center;
+
+}
+}
+
+@media only screen and (width< 650px) {
+  .content{
+   width: 100vw;
+   padding: 0px 1rem;
+   box-sizing: border-box;
+  }
+ }
+ 

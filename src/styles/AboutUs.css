@@ -1,0 +1,297 @@
+:root{
+  --sec1-font-size : 3.5rem;
+}
+
+#presentation {
+  margin-top: 2.5rem;
+
+}
+
+
+#presentation .sec1 .left button{
+  visibility: hidden;
+  opacity: 0; 
+  animation: fadeIn 3s; 
+}
+
+
+#presentation .sec1 .left.finished button{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.ImageSec1 {
+  background-image: linear-gradient(
+      180deg,
+      rgba(23, 24, 25, 0) 100%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../../public/img/pages/AboutUs/landing.jpg")
+}
+
+#presentation,
+#aboutUs {
+  font-weight: 400;
+  font-family: "GT America Condensed Medium", Helvetica, Arial, Lucida,
+    sans-serif;
+ color:var(--color-primary);
+ align-items: center;
+}
+
+#presentation .sec1 {
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows:  30rem;
+  font-stretch: condensed;
+  width: 90%; 
+  
+}
+
+#presentation .sec1 .left{
+  position: relative;
+  animation: slideInLeft 3s;
+}
+
+
+
+#presentation .sec1 .left button{
+  font-weight: bold;
+  text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 800;
+     
+	-webkit-transition: all ease 0.8s;
+	-moz-transition: all ease 0.8s;
+	transition: all ease 0.8s;
+    animation: fadeIn 3s;
+}
+
+#presentation .sec1 .left button:hover{
+  
+  color: white;
+  box-shadow: inset 20rem 0 0 0 var(--color-secondary);
+    
+}
+
+#presentation .sec1 .left .decoration{
+  position: absolute;
+    width: calc(var(--padding-left-decorator) - 2rem);
+   top:0;
+   bottom:0;
+    left: calc(0rem - var(--padding-left-decorator));
+}
+
+#presentation .sec1 h1 {
+  font-size: var(--sec1-font-size);
+  margin: 0px;
+  margin-bottom: 20px;
+}
+
+#presentation .sec1 h4 {
+  font-size: 1.26rem;
+  text-align: justify;
+}
+
+#presentation .separator,
+#aboutUs .separator {
+  height: 7rem;
+  grid-column: 2;
+ 
+}
+
+#presentation .sec1 .button_container {
+  width: 15rem;
+  padding: 0.6rem 0;
+  border: 3px solid var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+
+/* sec 2*/
+
+.ImageSec2 {
+  background-image: linear-gradient(
+      180deg,
+      rgba(23, 24, 25, 0) 100%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../../public/img/pages/AboutUs/team.jpg") !important;
+}
+
+#aboutUs .sec2 {
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows:  28rem;
+}
+
+
+#aboutUs .sec2 .right{
+  padding: 2.5rem 2rem;
+  justify-content: space-between;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+
+#aboutUs .sec2 h2 {
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.14em;
+  color: var(--color-secondary);
+  margin: 0px;
+  margin-bottom: 1rem;
+}
+
+#aboutUs .sec2 p {
+  margin: 0px;
+}
+
+
+/* Media query para tablets */
+@media only screen and (width < 1200px) {
+
+  #aboutUs .sec1 {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 35rem;
+  }
+
+
+}
+
+
+/* Media query para tablets */
+@media only screen and (width < 1120px) {
+ :root{
+      --padding-left-decorator: 6rem;
+      --sec1-font-size : 3rem;
+ }
+ 
+ #presentation .sec1 .left .decoration {
+  width: calc(var(--padding-left-decorator) - 1rem);
+}
+
+  
+#presentation .separator,
+#aboutUs .separator {
+  height: 5rem;
+}
+
+#presentation.margin-bottom,
+#aboutUs.margin-bottom {
+  margin-bottom: 7rem;
+}
+
+  #aboutUs .sec2 h2 {
+    font-size: 1.2rem;
+  }
+  
+
+}
+
+@media only screen and (width < 800px) {
+  :root{
+    --sec1-font-size : 3rem;
+  }
+  #presentation .sec1{
+    grid-template-columns: 1fr;
+    grid-auto-rows: 23rem 40rem;
+  }
+
+  #presentation .separator,
+  #aboutUs .separator {
+    grid-column: 1;
+  }
+
+  #presentation .content,
+  #aboutUs .content {
+    width: 100vw;
+    padding: 0px
+  }
+
+  #aboutUs .sec2{
+    grid-template-columns: 1fr;
+    grid-auto-rows: 30rem;
+  }
+
+  #aboutUs .sec2 .right {
+    padding: 5rem;
+  }
+
+}
+
+/* smartphone */
+@media only screen and (width < 650px) {
+  :root{
+    --padding-left-decorator: 10rem;
+    
+  }
+
+  #presentation .sec1 .left {
+    padding-right: 0px;
+  }
+
+  #presentation .separator,
+  #aboutUs .separator {
+    height: 3rem;
+  }
+
+  #aboutUs .sec2 .right {
+    padding: 2rem;
+    justify-content: space-around;
+  }
+
+}
+
+@media only screen and (width < 600px) {
+
+  #presentation .sec1 {
+    grid-auto-rows: 25rem 40rem;
+  }
+  
+  .background-image {
+    width: 95%;
+    height: 90%;
+    margin: auto auto;
+  }
+  
+  }
+
+  
+@media only screen and (width < 530px) {
+  #presentation .sec1 .left .decoration {
+
+    width: 9.5rem;
+
+  }
+
+  #presentation .sec1 {
+    grid-auto-rows: 28rem 40rem;
+  }
+
+  .background-image {
+    background-position: 74% center;
+}
+}
+
+@media only screen and (width < 415px) {
+  
+
+  #presentation .sec1 {
+    grid-auto-rows: 30rem 40rem;
+  }
+  .background-image {
+    background-position: 70% center;
+}
+
+}
+
+@media only screen and (width < 370px) {
+  
+
+  #presentation .sec1 {
+    grid-auto-rows: 33rem 40rem;
+  }
+
+}

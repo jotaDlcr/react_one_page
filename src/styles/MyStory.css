@@ -1,0 +1,24 @@
+#myStory{
+    font-stretch: condensed;
+    font-weight: 400;
+  font-family: "GT America Condensed Medium", Helvetica, Arial, Lucida;
+    align-items: center;
+}
+
+
+@media only screen and (width< 1120px) {
+
+}
+
+@media only screen and (width< 800px) {
+ 
+
+}
+
+
+/* smartphone */
+@media only screen and (width < 650px) {
+
+
+
+}
