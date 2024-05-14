@@ -1,6 +1,6 @@
 ## Installation
 
-To get started, open a terminal in your project directory and execute the following command to install the necessary modules:
+To get started, open a terminal in this project directory and execute the following command to install the necessary modules:
 
 ```bash
 npm install
