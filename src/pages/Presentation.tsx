@@ -5,7 +5,7 @@ import '../styles/AboutUs.css'
 
 const Presentation = () => {
 
-    const [t, i18n] = useTranslation("global");
+    const [t] = useTranslation("global");
     const text_ = t("home.sec1.title");
     const toLight_ = t("home.sec1.toLight") as unknown as string[];
   
