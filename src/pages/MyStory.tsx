@@ -10,17 +10,19 @@ interface StorySectionStructure{
 }
 
 const MyStory = () => {
-    const [t, i18n] = useTranslation("global");
+    const [t] = useTranslation("global");
 
     const title_ = t("MyStory.title");
     const sections = [
         {
             objSection: t("MyStory.then") as unknown as StorySectionStructure,
-            img: "img/pages/MyStory/navy2.jpg"
+            img: "img/pages/MyStory/navy2.jpg",
+            img_alt: "then-collage-photos"
         },
         {
             objSection: t("MyStory.now") as unknown as StorySectionStructure,
-            img: "img/pages/MyStory/now1.jpg"
+            img: "img/pages/MyStory/now1.jpg",
+            img_alt: "now-collage-photos"
         }
     ]
 

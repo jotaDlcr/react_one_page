@@ -5,8 +5,9 @@ interface StoryPanelProps {
     title: string;
     descrip: string;
     list?: string[];
-    imgSrc?: string
-    imgLeft?: boolean
+    imgSrc?: string;
+    imgAlt?: string;
+    imgLeft?: boolean;
 }
 
 
@@ -15,11 +16,12 @@ const StoryPanel: React.FC<StoryPanelProps> = ({
     descrip,
     list=[],
     imgSrc,
+    imgAlt = "",
     imgLeft = true
 }) => {
 
 
-    const imgElement = <img src={imgSrc} />;
+    const imgElement = <img src={imgSrc} alt={imgAlt} />;
     const textElement =
         <div className='story-descrip flex flex-column'>
             <div className='title-border'><h1 dangerouslySetInnerHTML={{ __html: title }} ></h1></div>

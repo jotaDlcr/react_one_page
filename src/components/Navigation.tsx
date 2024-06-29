@@ -10,7 +10,7 @@ const Navigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -68,7 +68,7 @@ const Navigation = () => {
     
   ];
   const buttonSlide = (index: string, href: string) => {
-    const ref = document.getElementById(index)?.click();
+    document.getElementById(index)?.click();
   };
   const listaElementos = MenuList.map((elemento, index) => (
     <li

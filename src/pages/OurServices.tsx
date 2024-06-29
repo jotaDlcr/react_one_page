@@ -16,7 +16,7 @@ interface ServiceStructure {
 
 const OurServices = () => {
 
-    const [t, i18n] = useTranslation("global");
+    const [t] = useTranslation("global");
     const title_ = t("OurServices.title");
     const text_ = t("OurServices.sec2.description");
     const toLight_ = t("OurServices.sec2.toLight") as unknown as string[];
@@ -52,8 +52,8 @@ const OurServices = () => {
                         span_state_0={item.more}
                         span_state_1={item.less}
                         imgSrc={serviceImages[index].imgSrc}
-                        backColor={index % 2 == 0 ? "background-color-primary" : "background-white"}
-                        textColor={index % 2 == 0 ?'color-white':"color-primary"}
+                        backColor={index % 2 === 0 ? "background-color-primary" : "background-white"}
+                        textColor={index % 2 === 0 ?'color-white':"color-primary"}
                         spanColor={'color-secondary'}
                         list={item.list}
                         moreText={item.moreText??null}

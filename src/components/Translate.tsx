@@ -8,7 +8,7 @@ import "../styles/Translate.css";
 const Translate = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const [t, i18n] = useTranslation("global");
+  const [, i18n] = useTranslation("global");
 
   const languages = [
     {

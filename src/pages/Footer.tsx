@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
 
-    const [t, i18n] = useTranslation("global");
+    const [t] = useTranslation("global");
     const imgLogo = 'img/free_logo.png';
     const descriptionBusiness = t("Footer.businessDecrption");
 
@@ -57,7 +57,7 @@ const Footer = () => {
         <div className='footer grid'>
             <div className='column1 flex flex-column'>
                 <div className='colInside flex flex-column'>
-                    <div className='logo'><img src={imgLogo} /></div>
+                    <div className='logo'><img alt="img-logo" src={imgLogo} /></div>
                     <h4>{descriptionBusiness}</h4>
                     <div className='socialIcons flex flex-row' >
                         <a href={link_fb} target="blank"><FaSquareFacebook className='icon' /></a>

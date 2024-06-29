@@ -10,7 +10,7 @@ interface FeatureStructure {
 
 const AboutUs = () => {
 
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
 
 
 

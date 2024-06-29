@@ -1,6 +1,6 @@
-import { ChangeEvent, useState, useEffect} from 'react';
+import { ChangeEvent, useState, useEffect, useCallback, useMemo} from 'react';
 import { useTranslation } from 'react-i18next';
-import emailjs from '@emailjs/browser';
+//import emailjs from '@emailjs/browser';
 import Input from '../components/Input';
 import SectionTitle from '../components/SectionTitle';
 import '../styles/ContactUs.css';
@@ -27,7 +27,7 @@ const ContactUs = () => {
     const imgContactUs = "img/pages/ContactUs/contact.jpg";
 
     const not_empty_msg = t("ContactUs.not_empty_error");
-    const inputs = [
+    const inputs = useMemo(() => [
         {
             type: "text",
             label: t("ContactUs.form.0.title"),
@@ -52,7 +52,7 @@ const ContactUs = () => {
             placeholder: t("ContactUs.form.3.placeholder"),
             errorMsg: not_empty_msg
         }
-    ];
+    ], [t, not_empty_msg]);
 
 
     const [inputName, setInputName] = useState('');
@@ -167,8 +167,8 @@ const ContactUs = () => {
     }
 
 
-    function validEmail() {
-        const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    const validEmail = useCallback(() => {
+        const regex = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i;
         if (!inputEmail) {
             setErrorEmail(not_empty_msg);
             return false;
@@ -179,9 +179,9 @@ const ContactUs = () => {
         } else {
             return true;
         }
-    }
+    }, [inputEmail, not_empty_msg, inputs]);
 
-    function validPhone() {
+    const validPhone = useCallback(() => {
         const phonePattern = /^\(\d{3}\) \d{3}-\d{4}$/;
         if (!inputPhone) {
             setErrorPhone(not_empty_msg);
@@ -192,19 +192,19 @@ const ContactUs = () => {
         } else {
             return true;
         }
-    }
+    }, [inputPhone, not_empty_msg, inputs]);
 
-    function validName() {
-        console.log("input "+ inputName);
+    const validName = useCallback(() => {
+        
         if (!inputName || inputName.length < 1) {
             setErrorName(not_empty_msg);
             return false;
         } else {
             return true;
         }
-    }
+    }, [inputName, not_empty_msg]);
 
-    function validMsg() {
+    const validMsg = useCallback(() => {
         if (!inputMsg || inputMsg.length < 1) {
             console.log(inputMsg.length);
             setErrorMsg(not_empty_msg);
@@ -212,15 +212,14 @@ const ContactUs = () => {
         } else {
             return true;
         }
-    }
+    }, [inputMsg, not_empty_msg]);
 
     useEffect(() => {
         setErrorName(prevError => prevError === not_empty_msg ? not_empty_msg : !validName() ? not_empty_msg : prevError);
         setErrorEmail(prevError => prevError === not_empty_msg ? not_empty_msg : !validEmail() ? inputs[1].errorMsg : prevError);
         setErrorPhone(prevError => prevError === not_empty_msg ? not_empty_msg : !validPhone() ? inputs[2].errorMsg : prevError);
         setErrorMsg(prevError => prevError === not_empty_msg ? not_empty_msg : !validMsg() ? not_empty_msg : prevError);
-    }, [i18n.language]);
-    
+    }, [i18n.language, inputs, not_empty_msg, validEmail, validMsg, validName, validPhone]);  
 
     return (
         <div id="contactUs" className="flex flex-column">
